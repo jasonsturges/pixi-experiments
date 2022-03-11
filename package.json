@@ -1,20 +1,20 @@
 {
-  "name": "storybook-for-pixi.js",
+  "name": "pixi-experiments",
   "version": "1.0.0",
-  "description": "Using Storybook for Pixi.js graphics development",
+  "description": "Pixi.js experimental prototypes",
   "author": "Jason Sturges <jason@jsonsturges.com> (https://jasonsturges.com)",
-  "homepage": "https://jasonsturges.github.io/storybook-for-pixi.js/",
+  "homepage": "https://jasonsturges.github.io/pixi-experiments/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jasonsturges/storybook-for-pixi.js"
+    "url": "https://github.com/jasonsturges/pixi-experiments"
   },
   "license": "ISC",
   "keywords": [
     "pixi",
     "storybook",
-    "ui",
-    "component",
-    "graphics"
+    "graphics",
+    "experiment",
+    "prototype"
   ],
   "main": "index.js",
   "scripts": {
