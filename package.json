@@ -1,0 +1,37 @@
+{
+  "name": "storybook-for-pixi.js",
+  "version": "1.0.0",
+  "description": "Using Storybook for Pixi.js graphics development",
+  "author": "Jason Sturges <jason@jsonsturges.com> (https://jasonsturges.com)",
+  "homepage": "https://jasonsturges.github.io/storybook-for-pixi.js/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jasonsturges/storybook-for-pixi.js"
+  },
+  "license": "ISC",
+  "keywords": [
+    "pixi",
+    "storybook",
+    "ui",
+    "component",
+    "graphics"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "dependencies": {
+    "pixi.js": "^6.2.2",
+    "pixi-viewport": "^4.34.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.5",
+    "@storybook/addon-actions": "^6.5.0-alpha.40",
+    "@storybook/addon-essentials": "^6.5.0-alpha.40",
+    "@storybook/addon-links": "^6.5.0-alpha.40",
+    "@storybook/html": "^6.5.0-alpha.40",
+    "babel-loader": "^8.2.3",
+    "prettier": "^2.5.1"
+  }
+}
