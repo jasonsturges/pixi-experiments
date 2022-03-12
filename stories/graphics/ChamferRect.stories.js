@@ -28,8 +28,8 @@ export const ChamferRect = ({
   graphics.beginFill(parseColor(fill));
 
   graphics.drawChamferRect(
-    viewport.screenWidth / 2,
-    viewport.screenHeight / 2,
+    viewport.screenWidth / 2 - width / 2,
+    viewport.screenHeight / 2 - height / 2,
     width,
     height,
     chamfer
