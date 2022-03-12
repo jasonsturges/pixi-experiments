@@ -2,13 +2,10 @@ import * as PIXI from "pixi.js";
 import { canvas, viewport } from "../Scene";
 
 export default {
-  title: "Example/Logos",
+  title: "Images/Types",
 };
 
-/**
- * Pixi logo story
- */
-export const PixiLogo = () => {
+export const SVG = () => {
   const logo = PIXI.Sprite.from("images/logo.svg");
   logo.anchor.set(0.5, 0.5);
   logo.x = viewport.screenWidth / 2;
