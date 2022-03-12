@@ -1,6 +1,6 @@
 import * as PIXI from "pixi.js";
 import { canvas, viewport } from "../Scene";
-import { drawBurst } from "../../src/components/Burst";
+import { drawGear } from "../../src/graphics/Gear";
 import { parseColor } from "../../src/utils/ColorUtils";
 
 export default {
@@ -16,40 +16,45 @@ export default {
   },
 };
 
-export const Burst = ({
+export const Gear = ({
   stroke,
   color,
   fill,
   sides,
   innerRadius,
   outerRadius,
+  holeSides,
+  holeRadius,
   angle,
 }) => {
   const graphics = new PIXI.Graphics();
-
   graphics.lineStyle(stroke, parseColor(color));
   graphics.beginFill(parseColor(fill));
 
-  drawBurst(
+  drawGear(
     graphics,
     viewport.screenWidth / 2,
     viewport.screenHeight / 2,
     sides,
     innerRadius,
     outerRadius,
-    angle
+    angle,
+    holeSides,
+    holeRadius
   );
 
   viewport.addChild(graphics);
 
   return canvas;
 };
-Burst.args = {
+Gear.args = {
   stroke: 2,
   color: "#cfefff",
   fill: "#036191",
-  sides: 5,
-  innerRadius: 50,
-  outerRadius: 30,
+  sides: 8,
+  innerRadius: 35,
+  outerRadius: 50,
+  holeSides: 8,
+  holeRadius: 10,
   angle: 0,
 };

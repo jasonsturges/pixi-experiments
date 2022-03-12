@@ -1,7 +1,7 @@
 import * as PIXI from "pixi.js";
 import "@pixi/graphics-extras";
 import { canvas, viewport } from "../Scene";
-import { drawStar } from "../../src/components/Star";
+import { drawStar } from "../../src/graphics/Star";
 import { parseColor } from "../../src/utils/ColorUtils";
 
 export default {

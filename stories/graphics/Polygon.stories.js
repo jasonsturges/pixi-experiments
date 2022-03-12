@@ -1,6 +1,6 @@
 import * as PIXI from "pixi.js";
 import { canvas, viewport } from "../Scene";
-import { drawPolygon } from "../../src/components/Polygon";
+import { drawPolygon } from "../../src/graphics/Polygon";
 import { parseColor } from "../../src/utils/ColorUtils";
 
 export default {
