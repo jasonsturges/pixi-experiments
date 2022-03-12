@@ -2,21 +2,18 @@ import * as PIXI from "pixi.js";
 import { canvas, viewport } from "../Scene";
 
 export default {
-  title: "Example/Text",
+  title: "Text/Text",
   argTypes: {
     text: { control: "text" },
     align: {
+      options: ["left", "center", "right"],
       control: {
         type: "radio",
-        options: ["left", "center", "right"],
       },
     },
   },
 };
 
-/**
- * TextStyle instance
- */
 export const TextStyle = (args) => {
   const textStyle = new PIXI.TextStyle({
     fontsize: 24,
