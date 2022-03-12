@@ -4,7 +4,7 @@ import { drawPolygon } from "../../src/graphics/Polygon";
 import { parseColor } from "../../src/utils/ColorUtils";
 
 export default {
-  title: "Drawing/Shapes/Polygon",
+  title: "Graphics/Shapes/Polygon",
   argTypes: {
     stroke: { control: "number" },
     color: { control: "color" },

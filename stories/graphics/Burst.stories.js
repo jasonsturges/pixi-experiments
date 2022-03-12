@@ -4,7 +4,7 @@ import { drawBurst } from "../../src/graphics/Burst";
 import { parseColor } from "../../src/utils/ColorUtils";
 
 export default {
-  title: "Drawing/Shapes",
+  title: "Graphics/Shapes",
   argTypes: {
     stroke: { control: "number" },
     color: { control: "color" },

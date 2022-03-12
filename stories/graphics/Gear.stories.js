@@ -4,7 +4,7 @@ import { drawGear } from "../../src/graphics/Gear";
 import { parseColor } from "../../src/utils/ColorUtils";
 
 export default {
-  title: "Drawing/Shapes",
+  title: "Graphics/Shapes",
   argTypes: {
     stroke: { control: "number" },
     color: { control: "color" },
