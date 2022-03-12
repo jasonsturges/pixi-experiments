@@ -4,7 +4,7 @@ import { drawStar } from "../../src/components/Star";
 import { parseColor } from "../../src/utils/ColorUtils";
 
 export default {
-  title: "Example/Shapes",
+  title: "Drawing/Shapes",
   argTypes: {
     stroke: { control: "number" },
     color: { control: "color" },
