@@ -15,14 +15,7 @@ export default {
   },
 };
 
-export const FilletRect = ({
-                              stroke,
-                              color,
-                              fill,
-                              width,
-                              height,
-                             fillet,
-                            }) => {
+export const FilletRect = ({ stroke, color, fill, width, height, fillet }) => {
   const graphics = new PIXI.Graphics();
   graphics.lineStyle(stroke, parseColor(color));
   graphics.beginFill(parseColor(fill));
