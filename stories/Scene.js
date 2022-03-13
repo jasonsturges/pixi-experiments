@@ -52,6 +52,10 @@ export const loadTextures = async () => {
     const loader = new PIXI.Loader();
     loader //
       .add("images/logo.svg")
+      .add({
+        name: "Eurostile80",
+        url: "fonts/Eurostile80.fnt",
+      })
       .load();
 
     loader.onComplete.add(() => {
