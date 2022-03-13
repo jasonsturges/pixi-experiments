@@ -19,7 +19,8 @@
   "main": "index.js",
   "scripts": {
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "deploy-storybook": "storybook-to-ghpages"
   },
   "dependencies": {
     "@pixi/graphics-extras": "^6.2.2",
@@ -33,6 +34,7 @@
     "@storybook/addon-essentials": "^6.4.19",
     "@storybook/addon-links": "^6.4.19",
     "@storybook/html": "^6.4.19",
+    "@storybook/storybook-deployer": "^2.8.10",
     "@types/offscreencanvas": "^2019.6.4",
     "babel-loader": "^8.2.3",
     "eslint": "^8.10.0",
