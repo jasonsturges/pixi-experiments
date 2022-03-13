@@ -1,6 +1,7 @@
 import * as PIXI from "pixi.js";
 import "@pixi/graphics-extras";
 import { canvas, viewport } from "../Scene";
+import { GeometryUtils } from "../../src/utils/GeometryUtils";
 import { parseColor } from "../../src/utils/ColorUtils";
 
 export default {
@@ -35,7 +36,7 @@ export const RoundedPolygon = ({
     radius,
     sides,
     corner,
-    rotation
+    GeometryUtils.deg2rad(rotation)
   );
 
   viewport.addChild(graphics);

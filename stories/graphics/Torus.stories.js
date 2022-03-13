@@ -1,6 +1,7 @@
 import * as PIXI from "pixi.js";
 import "@pixi/graphics-extras";
 import { canvas, viewport } from "../Scene";
+import { GeometryUtils } from "../../src/utils/GeometryUtils";
 import { parseColor } from "../../src/utils/ColorUtils";
 
 export default {
@@ -34,8 +35,8 @@ export const Torus = ({
     viewport.screenHeight / 2,
     innerRadius,
     outerRadius,
-    startArc,
-    endArc
+    GeometryUtils.deg2rad(startArc),
+    GeometryUtils.deg2rad(endArc)
   );
 
   viewport.addChild(graphics);
