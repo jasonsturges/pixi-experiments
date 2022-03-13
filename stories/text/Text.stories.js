@@ -5,6 +5,8 @@ export default {
   title: "Text/Text",
   argTypes: {
     text: { control: "text" },
+    fontFamily: { control: "text" },
+    fontSize: { control: "number" },
     resolution: { control: "number" },
     align: {
       options: ["left", "center", "right"],
@@ -17,7 +19,8 @@ export default {
 
 export const TextStyle = (args) => {
   const textStyle = new PIXI.TextStyle({
-    fontsize: 24,
+    fontFamily: args.fontFamily,
+    fontSize: args.fontSize,
     fill: 0xffffff,
     align: args.align,
   });
@@ -34,6 +37,8 @@ export const TextStyle = (args) => {
 };
 TextStyle.args = {
   text: "Hello, World\n😀",
+  fontFamily: "Arial",
+  fontSize: 24,
   resolution: 8,
   align: "center",
 };
