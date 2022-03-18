@@ -1,10 +1,12 @@
 import * as PIXI from "pixi.js";
 import { canvas, viewport } from "../Scene";
+import { parseColor } from "pixi-graphpaper";
 
 export default {
   title: "Text/Bitmap Text",
   argTypes: {
     text: { control: "text" },
+    color: { control: "color" },
     align: {
       options: ["left", "center", "right"],
       control: {
@@ -23,6 +25,7 @@ export const BitmapFont = (args) => {
     align: args.align,
     strokeThickness: 8,
   });
+  text.tint = parseColor(args.color);
   text.position.x = viewport.screenWidth / 2;
   text.position.y = viewport.screenHeight / 2;
   viewport.addChild(text);
@@ -31,5 +34,6 @@ export const BitmapFont = (args) => {
 };
 BitmapFont.args = {
   text: "Hello\nWorld",
+  color: "#ffffff",
   align: "left",
 };
