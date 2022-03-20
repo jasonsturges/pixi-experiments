@@ -3,10 +3,10 @@ import { Graphics } from "pixi.js";
 import { GraphPaper, GraphStyle } from "pixi-graphpaper";
 
 export default {
-  title: "Interaction/Pointer",
+  title: "Interaction/Drag",
 };
 
-export const Drag = ({ color }) => {
+export const ViewportDrag = ({ color }) => {
   // Background grid for reference
   const paper = new GraphPaper(GraphStyle.BLUEPRINT);
   viewport.addChild(paper);
