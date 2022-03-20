@@ -1,5 +1,6 @@
 import * as PIXI from "pixi.js";
 import { canvas, viewport } from "../Scene";
+import { parseColor } from "pixi-graphpaper";
 
 export default {
   title: "Text/Text",
@@ -8,6 +9,7 @@ export default {
     fontFamily: { control: "text" },
     fontSize: { control: "number" },
     resolution: { control: "number" },
+    color: { control: "color" },
     align: {
       options: ["left", "center", "right"],
       control: {
@@ -21,7 +23,7 @@ export const TextStyle = (args) => {
   const textStyle = new PIXI.TextStyle({
     fontFamily: args.fontFamily,
     fontSize: args.fontSize,
-    fill: 0xffffff,
+    fill: parseColor(args.color),
     align: args.align,
   });
 
@@ -40,5 +42,6 @@ TextStyle.args = {
   fontFamily: "Arial",
   fontSize: 24,
   resolution: 8,
+  color: "#ffffff",
   align: "center",
 };
