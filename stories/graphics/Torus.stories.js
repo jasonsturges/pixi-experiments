@@ -7,13 +7,13 @@ import { parseColor } from "../../src/utils/ColorUtils";
 export default {
   title: "Graphics/Shapes",
   argTypes: {
-    stroke: { control: "number" },
+    stroke: { control: { type: "range", min: 0, max: 5, step: 0.1 } },
     color: { control: "color" },
     fill: { control: "color" },
-    innerRadius: { control: "number" },
-    outerRadius: { control: "number" },
-    startArc: { control: "number" },
-    endArc: { control: "number" },
+    innerRadius: { control: { type: "range", min: 1, max: 100, step: 1 } },
+    outerRadius: { control: { type: "range", min: 1, max: 100, step: 1 } },
+    startArc: { control: { type: "range", min: 0, max: 360, step: 1 } },
+    endArc: { control: { type: "range", min: 0, max: 360, step: 1 } },
   },
 };
 
