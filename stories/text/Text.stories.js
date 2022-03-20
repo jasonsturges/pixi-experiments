@@ -7,8 +7,8 @@ export default {
   argTypes: {
     text: { control: "text" },
     fontFamily: { control: "text" },
-    fontSize: { control: "number" },
-    resolution: { control: "number" },
+    fontSize: { control: { type: "range", min: 1, max: 124, step: 1 } },
+    resolution: { control: { type: "range", min: 1, max: 8, step: 1 } },
     color: { control: "color" },
     align: {
       options: ["left", "center", "right"],
