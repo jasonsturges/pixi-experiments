@@ -15,16 +15,15 @@ export default {
 };
 
 export const ScaleMode = ({ scaleMode }) => {
-  const logo = PIXI.Sprite.from("images/logo.svg");
-  logo.anchor.set(0.5, 0.5);
-  logo.x = viewport.screenWidth / 2;
-  logo.y = viewport.screenHeight / 2;
-  viewport.addChild(logo);
+  const bunny = PIXI.Sprite.from("images/bunny.png");
+  bunny.x = viewport.screenWidth / 2;
+  bunny.y = viewport.screenHeight / 2;
+  viewport.addChild(bunny);
 
-  logo.texture.baseTexture.scaleMode = scaleMode;
+  bunny.texture.baseTexture.scaleMode = scaleMode;
 
   return canvas;
 };
 ScaleMode.args = {
-  scaleMode: SCALE_MODES.LINEAR,
+  scaleMode: SCALE_MODES.NEAREST,
 };
