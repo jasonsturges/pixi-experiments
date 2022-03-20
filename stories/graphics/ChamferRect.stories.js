@@ -6,12 +6,12 @@ import { parseColor } from "../../src/utils/ColorUtils";
 export default {
   title: "Graphics/Shapes",
   argTypes: {
-    stroke: { control: "number" },
+    stroke: { control: { type: "range", min: 0, max: 5, step: 0.1 } },
     color: { control: "color" },
     fill: { control: "color" },
-    width: { control: "number" },
-    height: { control: "number" },
-    chamfer: { control: "number" },
+    width: { control: { type: "range", min: 1, max: 100, step: 1 } },
+    height: { control: { type: "range", min: 1, max: 100, step: 1 } },
+    chamfer: { control: { type: "range", min: 0, max: 50, step: 1 } },
   },
 };
 
