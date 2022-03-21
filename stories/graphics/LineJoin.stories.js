@@ -5,7 +5,7 @@ import { GeometryUtils } from "../../src/utils/GeometryUtils";
 import { parseColor } from "pixi-graphpaper";
 
 export default {
-  title: "Graphics/Line",
+  title: "Graphics/Lines",
   argTypes: {
     alignment: { control: { type: "range", min: 0, max: 1, step: 0.1 } },
     angle: { control: { type: "range", min: 0, max: 360, step: 1 } },
