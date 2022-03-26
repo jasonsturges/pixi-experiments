@@ -24,8 +24,8 @@
   },
   "dependencies": {
     "@pixi/graphics-extras": "^6.2.2",
-    "pixi.js": "^6.2.2",
-    "pixi-graphpaper": "^2.0.0",
+    "pixi.js": "^6.3.0",
+    "pixi-graphpaper": "^2.0.1",
     "pixi-viewport": "^4.34.4"
   },
   "devDependencies": {
