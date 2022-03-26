@@ -8,6 +8,7 @@ export default {
     text: { control: "text" },
     fontFamily: { control: "text" },
     fontSize: { control: { type: "range", min: 1, max: 124, step: 1 } },
+    lineHeight: { control: { type: "range", min: 1, max: 124, step: 1 } },
     resolution: { control: { type: "range", min: 1, max: 8, step: 1 } },
     color: { control: "color" },
     align: {
@@ -23,6 +24,7 @@ export const TextStyle = (args) => {
   const textStyle = new PIXI.TextStyle({
     fontFamily: args.fontFamily,
     fontSize: args.fontSize,
+    lineHeight: args.lineHeight,
     fill: parseColor(args.color),
     align: args.align,
   });
@@ -41,6 +43,7 @@ TextStyle.args = {
   text: "Hello, World\n😀",
   fontFamily: "Arial",
   fontSize: 24,
+  lineHeight: 28,
   resolution: 8,
   color: "#ffffff",
   align: "center",
