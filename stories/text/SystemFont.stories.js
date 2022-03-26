@@ -1,13 +1,31 @@
 import * as PIXI from "pixi.js";
 import { canvas, viewport } from "../Scene";
+import { parseColor } from "pixi-graphpaper";
 
 export default {
   title: "Text/Bitmap Text",
   argTypes: {
     text: { control: "text" },
     font: { control: "text" },
+    fontSize: { control: { type: "range", min: 1, max: 128, step: 1 } },
+    lineHeight: { control: { type: "range", min: 1, max: 128, step: 1 } },
+    color: { control: "color" },
+    strokeThickness: { control: { type: "range", min: 0, max: 24, step: 1 } },
+    strokeColor: { control: "color" },
     align: {
       options: ["left", "center", "right"],
+      control: {
+        type: "radio",
+      },
+    },
+    fontStyle: {
+      options: ["normal", "italic", "oblique"],
+      control: {
+        type: "radio",
+      },
+    },
+    fontVariant: {
+      options: ["normal", "small-caps"],
       control: {
         type: "radio",
       },
@@ -19,15 +37,19 @@ export default {
  * Generate Bitmap Font from Times system
  */
 export const SystemFont = (args) => {
-  PIXI.BitmapFont.from("TimesSystem", {
+  PIXI.BitmapFont.from("System-Font", {
     fontFamily: args.font,
-    fontSize: 72,
-    strokeThickness: 1,
-    fill: "0xefefef",
+    fontSize: args.fontSize,
+    fontStyle: args.fontStyle,
+    fontVariant: args.fontVariant,
+    lineHeight: args.lineHeight,
+    stroke: parseColor(args.strokeColor),
+    strokeThickness: args.strokeThickness,
+    fill: parseColor(args.color),
   });
 
   const text = new PIXI.BitmapText(args.text, {
-    fontName: "TimesSystem",
+    fontName: "System-Font",
     align: args.align,
   });
 
@@ -40,5 +62,12 @@ export const SystemFont = (args) => {
 SystemFont.args = {
   text: "Hello\nWorld",
   font: "Times",
-  align: "left",
+  fontSize: 72,
+  lineHeight: 80,
+  color: "#efefef",
+  strokeThickness: 1,
+  strokeColor: "#8c8c8c",
+  align: "center",
+  fontStyle: "normal",
+  fontVariant: "normal",
 };
