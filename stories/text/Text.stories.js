@@ -9,6 +9,7 @@ export default {
     fontFamily: { control: "text" },
     fontSize: { control: { type: "range", min: 1, max: 124, step: 1 } },
     lineHeight: { control: { type: "range", min: 1, max: 124, step: 1 } },
+    letterSpacing: { control: { type: "range", min: 0, max: 16, step: 1 } },
     resolution: { control: { type: "range", min: 1, max: 8, step: 1 } },
     color: { control: "color" },
     align: {
@@ -25,6 +26,7 @@ export const TextStyle = (args) => {
     fontFamily: args.fontFamily,
     fontSize: args.fontSize,
     lineHeight: args.lineHeight,
+    letterSpacing: args.letterSpacing,
     fill: parseColor(args.color),
     align: args.align,
   });
@@ -44,6 +46,7 @@ TextStyle.args = {
   fontFamily: "Arial",
   fontSize: 24,
   lineHeight: 28,
+  letterSpacing: 0,
   resolution: 8,
   color: "#ffffff",
   align: "center",
