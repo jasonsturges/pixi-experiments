@@ -2,8 +2,8 @@ import { AbstractControl } from "./AbstractControl";
 import { Graphics, ILineStyleOptions, Rectangle, Text } from "pixi.js";
 
 export class Anchor extends AbstractControl {
-  protected _graphics?: Graphics | undefined;
-  protected readonly _text?: string | undefined;
+  private _text?: string | undefined;
+  protected readonly _graphics?: Graphics | undefined;
   protected readonly _textField?: Text | undefined;
 
   constructor() {
