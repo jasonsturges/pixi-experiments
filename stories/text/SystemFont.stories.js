@@ -40,8 +40,8 @@ export const SystemFont = (args) => {
   PIXI.BitmapFont.from("System-Font", {
     fontFamily: args.font,
     fontSize: args.fontSize,
-    fontStyle: args.fontStyle,
-    fontVariant: args.fontVariant,
+    fontStyle: args.fontStyle ?? "normal",
+    fontVariant: args.fontVariant ?? "normal",
     lineHeight: args.lineHeight,
     stroke: parseColor(args.strokeColor),
     strokeThickness: args.strokeThickness,
