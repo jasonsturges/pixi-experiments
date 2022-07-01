@@ -26,7 +26,8 @@
     "@pixi/graphics-extras": "^6.2.2",
     "pixi.js": "^6.3.0",
     "pixi-graphpaper": "^2.0.1",
-    "pixi-viewport": "^4.34.4"
+    "pixi-viewport": "^4.34.4",
+    "stats.js": "^0.17.0"
   },
   "devDependencies": {
     "@babel/core": "^7.17.5",
