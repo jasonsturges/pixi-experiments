@@ -1,4 +1,5 @@
 import * as PIXI from "pixi.js";
+import * as Stats from "./Stats";
 import { Viewport } from "pixi-viewport";
 
 export const canvas = document.createElement("canvas");
@@ -71,3 +72,5 @@ export const loadTextures = async () => {
     });
   });
 };
+
+export { Stats };
