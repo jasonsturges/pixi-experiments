@@ -7,14 +7,17 @@ import { showStats } from "../Stats";
 
 export default {
   title: "Performance/Stress Test",
-  argTypes: {},
+  argTypes: {
+    rows: { control: { type: "range", min: 1, max: 80, step: 1 } },
+    columns: { control: { type: "range", min: 1, max: 80, step: 1 } },
+  },
 };
 
-export const x1000 = ({}) => {
+export const Bursts = ({ rows, columns }) => {
   showStats();
 
-  for (let i = 0; i < 40; i++) {
-    for (let j = 0; j < 25; j++) {
+  for (let i = 0; i < rows; i++) {
+    for (let j = 0; j < columns; j++) {
       const stroke = Math.random() * 5;
       const color = RandomUtils.color();
       const fill = RandomUtils.color();
@@ -40,4 +43,7 @@ export const x1000 = ({}) => {
 
   return canvas;
 };
-x1000.args = {};
+Bursts.args = {
+  rows: 40,
+  columns: 25,
+};
